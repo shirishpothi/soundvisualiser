@@ -17,7 +17,15 @@
     "build": "echo \"Static site - no build step required\"",
     "deploy": "echo \"Deployment handled by CI/CD pipeline\""
   },
-  "keywords": ["sound", "visualization", "audio", "web-audio", "javascript", "html5", "canvas"],
+  "keywords": [
+    "sound",
+    "visualization",
+    "audio",
+    "web-audio",
+    "javascript",
+    "html5",
+    "canvas"
+  ],
   "author": "Shirish Pothi",
   "license": "GPL-3.0",
   "homepage": "https://shirishpothi.github.io/soundvisualiser",

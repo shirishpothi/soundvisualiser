@@ -7,6 +7,7 @@ A stunning web-based audio visualizer that transforms your music into mesmerizin
 ## ✨ Features
 
 ### 🎨 Multiple Visualization Types
+
 - **Bars**: Classic audio frequency bars with dynamic heights
 - **Wave**: Smooth flowing waveform display
 - **Circular**: Mesmerizing circular frequency visualization
@@ -14,6 +15,7 @@ A stunning web-based audio visualizer that transforms your music into mesmerizin
 - **Spectrum**: Full spectrum frequency analysis display
 
 ### 🌈 Beautiful Color Themes
+
 - **Neon Pulse**: Vibrant pink and cyan gradients
 - **Ocean Waves**: Cool blue gradients with wave-like motion
 - **Fire Ember**: Warm red and orange gradients
@@ -21,11 +23,13 @@ A stunning web-based audio visualizer that transforms your music into mesmerizin
 - **Custom Themes**: Additional gradient combinations
 
 ### 🎤 Flexible Audio Input
+
 - **Microphone Input**: Real-time visualization of live audio
 - **File Upload**: Support for MP3, WAV, OGG, and other audio formats
 - **Drag & Drop**: Easy file uploading interface
 
 ### 🎛️ Advanced Controls
+
 - **Play/Pause**: Full playback control for uploaded audio
 - **Progress Bar**: Seek to any position in your audio
 - **Time Display**: Current time and total duration
@@ -34,6 +38,7 @@ A stunning web-based audio visualizer that transforms your music into mesmerizin
 - **Theme Toggle**: Switch between light and dark modes
 
 ### 📱 Modern Design
+
 - **Responsive Layout**: Works perfectly on desktop, tablet, and mobile
 - **Smooth Animations**: Butter-smooth 60fps animations
 - **Glass Morphism**: Modern UI with blur effects and transparency
@@ -42,11 +47,13 @@ A stunning web-based audio visualizer that transforms your music into mesmerizin
 ## 🚀 Quick Start
 
 ### Option 1: Direct Launch
+
 1. **Download or Clone**: Get the project files to your computer
 2. **Open**: Launch `home.html` for the landing page or `index.html` for direct app access
 3. **Enjoy**: Start visualizing your audio immediately!
 
 ### Option 2: Local Server (Recommended)
+
 ```bash
 # Clone the repository
 git clone https://github.com/shirishpothi/soundvisualiser.git
@@ -66,8 +73,8 @@ npx serve .
 > [!IMPORTANT]  
 > Please remember to check microphone permissions before using the microphone features.
 
-
 ### 🎵 Getting Started
+
 1. **Launch the App**: Open the application in your web browser
 2. **Choose Your Audio Source**:
    - 🎤 **Microphone**: Click "Use Microphone" for real-time audio visualization
@@ -75,11 +82,14 @@ npx serve .
    - 🎧 **Supported Formats**: MP3, WAV, OGG, M4A, and more
 
 ### 🎨 Customization
+
 3. **Select Visualization Style**:
+
    - Choose from Bars, Wave, Circular, Particles, or Spectrum
    - Each style offers unique visual patterns and animations
 
 4. **Pick Your Theme**:
+
    - Browse through multiple color themes
    - Switch between light and dark modes
    - Themes automatically adapt to your visualization style
@@ -90,6 +100,7 @@ npx serve .
    - ⚡ **Performance**: Toggle effects for optimal performance
 
 ### 🎮 Controls
+
 - **Spacebar**: Play/Pause audio
 - **Left/Right Arrows**: Seek backward/forward
 - **F**: Toggle fullscreen mode
@@ -99,6 +110,7 @@ npx serve .
 ## 🛠️ Technical Implementation
 
 ### Core Technologies
+
 - **🎵 Web Audio API**: Advanced audio processing and real-time frequency analysis
 - **🎨 Canvas API**: High-performance 2D graphics rendering at 60fps
 - **⚡ JavaScript ES6+**: Modern JavaScript with async/await and modules
@@ -106,12 +118,14 @@ npx serve .
 - **📱 Progressive Web App**: Offline capability and mobile optimization
 
 ### Architecture
+
 - **Modular Design**: Separate files for different functionalities
 - **Performance Optimized**: RequestAnimationFrame for smooth animations
 - **Memory Efficient**: Proper cleanup and garbage collection
 - **Cross-Browser**: Polyfills and fallbacks for maximum compatibility
 
 ### Audio Processing
+
 - **FFT Analysis**: Real-time Fast Fourier Transform for frequency data
 - **Smoothing Algorithms**: Temporal smoothing for stable visualizations
 - **Dynamic Range**: Automatic gain control and normalization
@@ -120,17 +134,18 @@ npx serve .
 ## 🌐 Browser Support
 
 > [!NOTE]  
-> SoundWave is designed to work best on Chromium based browsers. 
+> SoundWave is designed to work best on Chromium based browsers.
 
-| Browser | Version | Support Level |
-|---------|---------|---------------|
-| Chrome | 66+ | ✅ Full Support |
-| Firefox | 60+ | ✅ Full Support |
-| Safari | 11.1+ | ✅ Full Support |
-| Edge | 79+ | ✅ Full Support |
-| Opera | 53+ | ✅ Full Support |
+| Browser | Version | Support Level   |
+| ------- | ------- | --------------- |
+| Chrome  | 66+     | ✅ Full Support |
+| Firefox | 60+     | ✅ Full Support |
+| Safari  | 11.1+   | ✅ Full Support |
+| Edge    | 79+     | ✅ Full Support |
+| Opera   | 53+     | ✅ Full Support |
 
 ### Required Features
+
 - Web Audio API
 - Canvas 2D Context
 - ES6 Modules
@@ -146,6 +161,7 @@ We welcome contributions! Here's how you can help:
 4. **📖 Improve Documentation**: Help make the docs clearer and more comprehensive
 
 ### Development Setup
+
 ```bash
 # Fork and clone the repository
 git clone <enter-fork-url>
@@ -177,33 +193,40 @@ git push origin feature/feature-name
 This project uses GitHub Actions for continuous integration and deployment:
 
 #### 🔄 **Automated Workflows**
+
 - **Code Quality**: ESLint, Prettier, HTML validation
 - **Security Scanning**: CodeQL, dependency audits, vulnerability scans
 - **Performance Testing**: Lighthouse CI with accessibility checks
 - **Automated Deployment**: GitHub Pages and Netlify integration
 
 #### 🚀 **Deployment Targets**
+
 - **GitHub Pages**: Automatic deployment on main branch
 - **Netlify**: Preview deployments for pull requests
 - **Pull Request Previews**: Every PR gets a preview deployment
 
 #### 🛡️ **Security Features**
+
 - Daily security scans
 - Dependency vulnerability monitoring
 - Automated dependency updates via Dependabot
 - SARIF security reporting
+
 ## 📄 License
 
 This project is licensed under the **GPL-3.0 License**.
 
 ### What this means:
+
 - You can use, modify, and distribute the project for any purpose
 - You must provide attribution to the original creators
 - You cannot use the project for commercial purposes without permission
 - You must include the license and attribution notice in all copies or substantial portions of the project
 
 ### Attribution
+
 When using or modifying this project, please include:
+
 ```
 SoundWave Audio Visualisation Studio
 Original work by Shirish
@@ -211,7 +234,6 @@ Licensed under GPL-3.0 License
 ```
 
 For commercial licensing inquiries, please contact shirish.pothi.27@gmail.com.
-
 
 ## 🙏 Acknowledgments
 

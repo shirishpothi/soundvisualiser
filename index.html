@@ -1,259 +1,306 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SoundWave - Audio Visualiser</title>
-    <link rel="stylesheet" href="styles-new.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles-new.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
     <!-- Theme Toggle -->
-    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light theme">
-        <i class="fas fa-moon" aria-hidden="true"></i>
-        <i class="fas fa-sun" aria-hidden="true"></i>
+    <button
+      id="theme-toggle"
+      class="theme-toggle"
+      aria-label="Toggle dark/light theme"
+    >
+      <i class="fas fa-moon" aria-hidden="true"></i>
+      <i class="fas fa-sun" aria-hidden="true"></i>
     </button>
 
     <!-- Animated background blobs similar to homepage -->
     <div class="animated-background">
-        <div class="gradient-blob blob-1"></div>
-        <div class="gradient-blob blob-2"></div>
-        <div class="gradient-blob blob-3"></div>
+      <div class="gradient-blob blob-1"></div>
+      <div class="gradient-blob blob-2"></div>
+      <div class="gradient-blob blob-3"></div>
     </div>
 
     <div class="app-container">
-        <header>
-            <div class="header-content">
-                <h1>SoundWave</h1>
-                <p class="tagline">Audio Visualisation Studio</p>
-                <a href="home.html" class="back-link">
-                    <i class="fas fa-chevron-left"></i> Back to Home
-                </a>
-            </div>
-        </header>
+      <header>
+        <div class="header-content">
+          <h1>SoundWave</h1>
+          <p class="tagline">Audio Visualisation Studio</p>
+          <a href="home.html" class="back-link">
+            <i class="fas fa-chevron-left"></i> Back to Home
+          </a>
+        </div>
+      </header>
 
-        <!-- Main Visualizer Section -->
-        <div class="visualiser-container">
-            <div class="canvas-wrapper">
-                <canvas id="visualiser"></canvas>
+      <!-- Main Visualizer Section -->
+      <div class="visualiser-container">
+        <div class="canvas-wrapper">
+          <canvas id="visualiser"></canvas>
 
-                <!-- Visualization Overlay with improved layout -->
-                <div class="visualization-overlay">
-                    <!-- Top row: Volume and Frequency -->
-                    <div class="overlay-top">
-                        <div class="volume-meter" id="volumeMeter">
-                            <div class="volume-label">Volume</div>
-                            <div class="volume-bar">
-                                <div class="volume-fill" id="volumeFill"></div>
-                            </div>
-                        </div>
-
-                        <div class="frequency-display" id="frequencyDisplay">
-                            <div class="freq-item">
-                                <span class="freq-label">Bass</span>
-                                <span class="freq-value" id="bassValue">0</span>
-                            </div>
-                            <div class="freq-item">
-                                <span class="freq-label">Mid</span>
-                                <span class="freq-value" id="midValue">0</span>
-                            </div>
-                            <div class="freq-item">
-                                <span class="freq-label">High</span>
-                                <span class="freq-value" id="highValue">0</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Bottom row: Info and Controls -->
-                    <div class="overlay-bottom">
-                        <div class="visualization-info" id="visualizationInfo">
-                            <div class="info-pill">
-                                <span id="infoType">Bars</span> • <span id="infoTheme">Neon Pulse</span>
-                            </div>
-                        </div>
-
-                        <button class="fullscreen-btn" id="fullscreenBtn" title="Toggle Fullscreen">
-                            <i class="fas fa-expand"></i>
-                        </button>
-                    </div>
+          <!-- Visualization Overlay with improved layout -->
+          <div class="visualization-overlay">
+            <!-- Top row: Volume and Frequency -->
+            <div class="overlay-top">
+              <div class="volume-meter" id="volumeMeter">
+                <div class="volume-label">Volume</div>
+                <div class="volume-bar">
+                  <div class="volume-fill" id="volumeFill"></div>
                 </div>
+              </div>
+
+              <div class="frequency-display" id="frequencyDisplay">
+                <div class="freq-item">
+                  <span class="freq-label">Bass</span>
+                  <span class="freq-value" id="bassValue">0</span>
+                </div>
+                <div class="freq-item">
+                  <span class="freq-label">Mid</span>
+                  <span class="freq-value" id="midValue">0</span>
+                </div>
+                <div class="freq-item">
+                  <span class="freq-label">High</span>
+                  <span class="freq-value" id="highValue">0</span>
+                </div>
+              </div>
             </div>
 
-            <!-- Audio Input Controls -->
-            <div class="audio-input-section">
-                <h3 class="section-title">Audio Input</h3>
-                <div class="input-controls">
-                    <button id="micButton" class="control-button primary">
-                        <i class="fas fa-microphone"></i>
-                        <span>Use Microphone</span>
-                    </button>
-                    <div class="file-upload">
-                        <label for="audioUpload" class="control-button">
-                            <i class="fas fa-upload"></i>
-                            <span>Upload Audio</span>
-                        </label>
-                        <input type="file" id="audioUpload" accept="audio/*">
-                    </div>
-                    <button id="recordBtn" class="control-button" title="Record Audio">
-                        <i class="fas fa-record-vinyl"></i>
-                        <span>Record</span>
-                    </button>
+            <!-- Bottom row: Info and Controls -->
+            <div class="overlay-bottom">
+              <div class="visualization-info" id="visualizationInfo">
+                <div class="info-pill">
+                  <span id="infoType">Bars</span> •
+                  <span id="infoTheme">Neon Pulse</span>
                 </div>
-            </div>
+              </div>
 
-            <!-- Playback Controls -->
-            <div class="playback-controls hidden" id="playbackControls">
-                <h3 class="section-title">Playback</h3>
-                <div class="playback-wrapper">
-                    <button id="playPauseButton" class="control-button play-pause">
-                        <i class="fas fa-play"></i>
-                    </button>
-                    <div class="progress-container">
-                        <div class="progress-bar">
-                            <div class="progress" id="progress"></div>
-                        </div>
-                        <div class="time-display">
-                            <span id="currentTime">0:00</span> / <span id="totalTime">0:00</span>
-                        </div>
-                    </div>
-                </div>
+              <button
+                class="fullscreen-btn"
+                id="fullscreenBtn"
+                title="Toggle Fullscreen"
+              >
+                <i class="fas fa-expand"></i>
+              </button>
             </div>
-
-            <!-- Audio Enhancement -->
-            <div class="audio-controls" id="audioControls">
-                <h3 class="section-title">Audio Enhancement</h3>
-                <div class="equalizer-controls">
-                    <div class="eq-group">
-                        <label>Bass</label>
-                        <input type="range" id="bassControl" min="-20" max="20" value="0" class="eq-slider">
-                        <span class="eq-value" id="bassDisplay">0</span>
-                    </div>
-                    <div class="eq-group">
-                        <label>Mid</label>
-                        <input type="range" id="midControl" min="-20" max="20" value="0" class="eq-slider">
-                        <span class="eq-value" id="midDisplay">0</span>
-                    </div>
-                    <div class="eq-group">
-                        <label>Treble</label>
-                        <input type="range" id="trebleControl" min="-20" max="20" value="0" class="eq-slider">
-                        <span class="eq-value" id="trebleDisplay">0</span>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
 
-        <!-- Visualization Settings -->
-        <div class="visualization-options">
-            <h3 class="section-title">Visualization Settings</h3>
-
-            <!-- Quick Presets - moved to top for better UX -->
-            <div class="preset-section">
-                <h4 class="subsection-title">Quick Presets</h4>
-                <div class="preset-buttons">
-                    <button class="preset-btn" data-preset="energetic">
-                        <i class="fas fa-bolt"></i>
-                        <span>Energetic</span>
-                    </button>
-                    <button class="preset-btn" data-preset="calm">
-                        <i class="fas fa-leaf"></i>
-                        <span>Calm</span>
-                    </button>
-                    <button class="preset-btn" data-preset="psychedelic">
-                        <i class="fas fa-magic"></i>
-                        <span>Psychedelic</span>
-                    </button>
-                    <button class="preset-btn" data-preset="minimal">
-                        <i class="fas fa-circle"></i>
-                        <span>Minimal</span>
-                    </button>
-                </div>
+        <!-- Audio Input Controls -->
+        <div class="audio-input-section">
+          <h3 class="section-title">Audio Input</h3>
+          <div class="input-controls">
+            <button id="micButton" class="control-button primary">
+              <i class="fas fa-microphone"></i>
+              <span>Use Microphone</span>
+            </button>
+            <div class="file-upload">
+              <label for="audioUpload" class="control-button">
+                <i class="fas fa-upload"></i>
+                <span>Upload Audio</span>
+              </label>
+              <input type="file" id="audioUpload" accept="audio/*" />
             </div>
-
-            <!-- Custom Settings -->
-            <div class="custom-settings">
-                <h4 class="subsection-title">Custom Settings</h4>
-                <div class="options-container">
-                    <div class="option-group">
-                        <label for="visualizationType">Visualization Type</label>
-                        <div class="select-wrapper">
-                            <select id="visualizationType">
-                                <option value="bars">Bars</option>
-                                <option value="wave">Wave</option>
-                                <option value="circular">Circular</option>
-                                <option value="particles">Particles</option>
-                                <option value="spectrum">Spectrum</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="option-group">
-                        <label for="colorTheme">Color Theme</label>
-                        <div class="select-wrapper">
-                            <select id="colorTheme">
-                                <option value="gradient1">Neon Pulse</option>
-                                <option value="gradient2">Ocean Waves</option>
-                                <option value="gradient3">Fire Ember</option>
-                                <option value="gradient4">Galaxy</option>
-                                <option value="gradient5">Sunset</option>
-                                <option value="gradient6">Aurora</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="option-group">
-                        <label for="sensitivity">Sensitivity</label>
-                        <div class="range-slider-wrapper">
-                            <input type="range" id="sensitivity" min="1" max="10" value="5">
-                            <div class="range-labels">
-                                <span>Low</span>
-                                <span>High</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="option-group">
-                        <label for="smoothing">Smoothing</label>
-                        <div class="range-slider-wrapper">
-                            <input type="range" id="smoothing" min="0" max="1" step="0.1" value="0.8">
-                            <div class="range-labels">
-                                <span>Sharp</span>
-                                <span>Smooth</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <button id="recordBtn" class="control-button" title="Record Audio">
+              <i class="fas fa-record-vinyl"></i>
+              <span>Record</span>
+            </button>
+          </div>
         </div>
 
-        <div class="track-info hidden" id="trackInfo">
-            <div class="track-header">
-                <div class="info-item">
-                    <span class="info-label">Now Playing:</span>
-                    <span id="trackName" class="track-title">-</span>
-                </div>
-                <div class="track-status">
-                    <div class="audio-badge">
-                        <i class="fas fa-music"></i> Audio File
-                    </div>
-                </div>
+        <!-- Playback Controls -->
+        <div class="playback-controls hidden" id="playbackControls">
+          <h3 class="section-title">Playback</h3>
+          <div class="playback-wrapper">
+            <button id="playPauseButton" class="control-button play-pause">
+              <i class="fas fa-play"></i>
+            </button>
+            <div class="progress-container">
+              <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+              </div>
+              <div class="time-display">
+                <span id="currentTime">0:00</span> /
+                <span id="totalTime">0:00</span>
+              </div>
             </div>
+          </div>
         </div>
+
+        <!-- Audio Enhancement -->
+        <div class="audio-controls" id="audioControls">
+          <h3 class="section-title">Audio Enhancement</h3>
+          <div class="equalizer-controls">
+            <div class="eq-group">
+              <label>Bass</label>
+              <input
+                type="range"
+                id="bassControl"
+                min="-20"
+                max="20"
+                value="0"
+                class="eq-slider"
+              />
+              <span class="eq-value" id="bassDisplay">0</span>
+            </div>
+            <div class="eq-group">
+              <label>Mid</label>
+              <input
+                type="range"
+                id="midControl"
+                min="-20"
+                max="20"
+                value="0"
+                class="eq-slider"
+              />
+              <span class="eq-value" id="midDisplay">0</span>
+            </div>
+            <div class="eq-group">
+              <label>Treble</label>
+              <input
+                type="range"
+                id="trebleControl"
+                min="-20"
+                max="20"
+                value="0"
+                class="eq-slider"
+              />
+              <span class="eq-value" id="trebleDisplay">0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Visualization Settings -->
+      <div class="visualization-options">
+        <h3 class="section-title">Visualization Settings</h3>
+
+        <!-- Quick Presets - moved to top for better UX -->
+        <div class="preset-section">
+          <h4 class="subsection-title">Quick Presets</h4>
+          <div class="preset-buttons">
+            <button class="preset-btn" data-preset="energetic">
+              <i class="fas fa-bolt"></i>
+              <span>Energetic</span>
+            </button>
+            <button class="preset-btn" data-preset="calm">
+              <i class="fas fa-leaf"></i>
+              <span>Calm</span>
+            </button>
+            <button class="preset-btn" data-preset="psychedelic">
+              <i class="fas fa-magic"></i>
+              <span>Psychedelic</span>
+            </button>
+            <button class="preset-btn" data-preset="minimal">
+              <i class="fas fa-circle"></i>
+              <span>Minimal</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Custom Settings -->
+        <div class="custom-settings">
+          <h4 class="subsection-title">Custom Settings</h4>
+          <div class="options-container">
+            <div class="option-group">
+              <label for="visualizationType">Visualization Type</label>
+              <div class="select-wrapper">
+                <select id="visualizationType">
+                  <option value="bars">Bars</option>
+                  <option value="wave">Wave</option>
+                  <option value="circular">Circular</option>
+                  <option value="particles">Particles</option>
+                  <option value="spectrum">Spectrum</option>
+                </select>
+              </div>
+            </div>
+            <div class="option-group">
+              <label for="colorTheme">Color Theme</label>
+              <div class="select-wrapper">
+                <select id="colorTheme">
+                  <option value="gradient1">Neon Pulse</option>
+                  <option value="gradient2">Ocean Waves</option>
+                  <option value="gradient3">Fire Ember</option>
+                  <option value="gradient4">Galaxy</option>
+                  <option value="gradient5">Sunset</option>
+                  <option value="gradient6">Aurora</option>
+                </select>
+              </div>
+            </div>
+            <div class="option-group">
+              <label for="sensitivity">Sensitivity</label>
+              <div class="range-slider-wrapper">
+                <input
+                  type="range"
+                  id="sensitivity"
+                  min="1"
+                  max="10"
+                  value="5"
+                />
+                <div class="range-labels">
+                  <span>Low</span>
+                  <span>High</span>
+                </div>
+              </div>
+            </div>
+            <div class="option-group">
+              <label for="smoothing">Smoothing</label>
+              <div class="range-slider-wrapper">
+                <input
+                  type="range"
+                  id="smoothing"
+                  min="0"
+                  max="1"
+                  step="0.1"
+                  value="0.8"
+                />
+                <div class="range-labels">
+                  <span>Sharp</span>
+                  <span>Smooth</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="track-info hidden" id="trackInfo">
+        <div class="track-header">
+          <div class="info-item">
+            <span class="info-label">Now Playing:</span>
+            <span id="trackName" class="track-title">-</span>
+          </div>
+          <div class="track-status">
+            <div class="audio-badge">
+              <i class="fas fa-music"></i> Audio File
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <footer>
-        <div class="footer-content">
-            <div class="footer-branding">
-                <span class="footer-logo">SoundWave</span>
-                <p>Experience sound in a new dimension</p>
-            </div>
-            <div class="footer-nav">
-                <a href="home.html">Home</a>
-                <a href="home.html#features">Features</a>
-                <a href="home.html#about">About</a>
-            </div>
+      <div class="footer-content">
+        <div class="footer-branding">
+          <span class="footer-logo">SoundWave</span>
+          <p>Experience sound in a new dimension</p>
         </div>
-        <div class="footer-bottom">
-            <p>Made with ❤️ by Shirish Pothi</p>
+        <div class="footer-nav">
+          <a href="home.html">Home</a>
+          <a href="home.html#features">Features</a>
+          <a href="home.html#about">About</a>
         </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Made with ❤️ by Shirish Pothi</p>
+      </div>
     </footer>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
