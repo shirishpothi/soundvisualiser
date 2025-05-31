@@ -64,7 +64,7 @@ npx serve .
 ## 📖 How to Use
 
 > [!IMPORTANT]  
-> Please remember to check microphone permissions before using the microphone features. 
+> Please remember to check microphone permissions before using the microphone features.
 
 
 ### 🎵 Getting Started
@@ -151,10 +151,20 @@ We welcome contributions! Here's how you can help:
 git clone <enter-fork-url>
 cd sound-visualiser
 
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
 # Create a feature branch
 git checkout -b feature/feature-name
 
 # Make your changes and test thoroughly
+npm run lint          # Check code quality
+npm run format        # Format code
+npm run lighthouse    # Test performance
+
 # Commit with descriptive messages
 git commit -m "Add amazing new visualization type"
 
@@ -162,6 +172,26 @@ git commit -m "Add amazing new visualization type"
 git push origin feature/feature-name
 ```
 
+### CI/CD Pipeline
+
+This project uses GitHub Actions for continuous integration and deployment:
+
+#### 🔄 **Automated Workflows**
+- **Code Quality**: ESLint, Prettier, HTML validation
+- **Security Scanning**: CodeQL, dependency audits, vulnerability scans
+- **Performance Testing**: Lighthouse CI with accessibility checks
+- **Automated Deployment**: GitHub Pages and Netlify integration
+
+#### 🚀 **Deployment Targets**
+- **GitHub Pages**: Automatic deployment on main branch
+- **Netlify**: Preview deployments for pull requests
+- **Pull Request Previews**: Every PR gets a preview deployment
+
+#### 🛡️ **Security Features**
+- Daily security scans
+- Dependency vulnerability monitoring
+- Automated dependency updates via Dependabot
+- SARIF security reporting
 ## 📄 License
 
 This project is licensed under the **GPL-3.0 License**.

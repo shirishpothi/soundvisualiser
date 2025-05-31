@@ -1,0 +1,13 @@
+[build]
+  publish = "/"
+  command = ""
+
+[[redirects]]
+  from = "/*"
+  to = "/home.html"
+  status = 200
+
+[dev]
+  framework = "html"
+  targetPort = 8000
+  port = 8888

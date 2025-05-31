@@ -1,0 +1,44 @@
+{
+  "name": "sound-visualiser",
+  "version": "1.0.0",
+  "description": "An interactive sound visualization application",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve . -p 3000",
+    "dev": "serve . -p 8000",
+    "lint": "eslint *.js --fix",
+    "lint:check": "eslint *.js",
+    "format": "prettier --write \"**/*.{js,html,css,md,json}\"",
+    "format:check": "prettier --check \"**/*.{js,html,css,md,json}\"",
+    "lighthouse": "lhci autorun",
+    "validate:html": "html-validate *.html",
+    "security:audit": "npm audit",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "echo \"Static site - no build step required\"",
+    "deploy": "echo \"Deployment handled by CI/CD pipeline\""
+  },
+  "keywords": ["sound", "visualization", "audio", "web-audio", "javascript", "html5", "canvas"],
+  "author": "Shirish Pothi",
+  "license": "GPL-3.0",
+  "homepage": "https://shirishpothi.github.io/soundvisualiser",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shirishpothi/soundvisualiser.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shirishpothi/soundvisualiser/issues"
+  },
+  "dependencies": {
+    "serve": "^14.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5",
+    "@lhci/cli": "^0.12.0",
+    "html-validate": "^8.9.1"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+}
