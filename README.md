@@ -49,7 +49,7 @@ A stunning web-based audio visualizer that transforms your music into mesmerizin
 ### Option 2: Local Server (Recommended)
 ```bash
 # Clone the repository
-git clone <your-repo-url>
+git clone https://github.com/shirishpothi/soundvisualiser.git
 cd sound-visualiser
 
 # Start a local server (Python 3)
@@ -62,6 +62,10 @@ npx serve .
 ```
 
 ## 📖 How to Use
+
+> [!IMPORTANT]  
+> Please remember to check microphone permissions before using the microphone features. 
+
 
 ### 🎵 Getting Started
 1. **Launch the App**: Open the application in your web browser
@@ -115,6 +119,9 @@ npx serve .
 
 ## 🌐 Browser Support
 
+> [!NOTE]  
+> SoundWave is designed to work best on Chromium based browsers. 
+
 | Browser | Version | Support Level |
 |---------|---------|---------------|
 | Chrome | 66+ | ✅ Full Support |
@@ -141,41 +148,40 @@ We welcome contributions! Here's how you can help:
 ### Development Setup
 ```bash
 # Fork and clone the repository
-git clone <your-fork-url>
+git clone <enter-fork-url>
 cd sound-visualiser
 
 # Create a feature branch
-git checkout -b feature/amazing-new-visualization
+git checkout -b feature/feature-name
 
 # Make your changes and test thoroughly
 # Commit with descriptive messages
 git commit -m "Add amazing new visualization type"
 
 # Push and create a pull request
-git push origin feature/amazing-new-visualization
+git push origin feature/feature-name
 ```
 
 ## 📄 License
 
-This project is licensed under the **Creative Commons Attribution-NonCommercial 4.0 International License**.
+This project is licensed under the **GPL-3.0 License**.
 
 ### What this means:
-- ✅ **You CAN**: Use, modify, and distribute this project for personal, educational, or non-commercial purposes
-- ✅ **You CAN**: Create derivative works and adaptations
-- ✅ **You MUST**: Provide appropriate attribution to the original creators
-- ❌ **You CANNOT**: Use this project for commercial purposes without permission
+- You can use, modify, and distribute the project for any purpose
+- You must provide attribution to the original creators
+- You cannot use the project for commercial purposes without permission
+- You must include the license and attribution notice in all copies or substantial portions of the project
 
 ### Attribution
 When using or modifying this project, please include:
 ```
 SoundWave Audio Visualisation Studio
-Original work by [Your Name]
-Licensed under CC BY-NC 4.0
+Original work by Shirish
+Licensed under GPL-3.0 License
 ```
 
-For commercial licensing inquiries, please contact [your-email@example.com].
+For commercial licensing inquiries, please contact shirish.pothi.27@gmail.com.
 
-**Full License Text**: [Creative Commons BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)
 
 ## 🙏 Acknowledgments
 
@@ -183,12 +189,13 @@ For commercial licensing inquiries, please contact [your-email@example.com].
 - **Canvas API Contributors**: For powerful 2D graphics capabilities
 - **Open Source Community**: For inspiration and best practices
 - **Audio Visualization Pioneers**: For paving the way in digital audio art
+- **You**: For being part of the SoundWave journey!
 
 ---
 
 <div align="center">
 
-**Made with ❤️ for the audio visualization community**
+**Made with ❤️ by Shirish, for the audio visualization community**
 
 [🌟 Star this project](https://github.com/your-username/sound-visualiser) • [🐛 Report Bug](https://github.com/your-username/sound-visualiser/issues) • [💡 Request Feature](https://github.com/your-username/sound-visualiser/issues)
 
