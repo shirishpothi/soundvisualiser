@@ -77,7 +77,7 @@ jobs:
     needs: [quality-check, security-scan]
     runs-on: ubuntu-latest
     name: Deploy to Netlify
-    if: ${{ secrets.NETLIFY_AUTH_TOKEN != '' && secrets.NETLIFY_SITE_ID != '' }}
+    if: secrets.NETLIFY_AUTH_TOKEN != '' && secrets.NETLIFY_SITE_ID != ''
 
     steps:
     - name: Checkout code
