@@ -2,7 +2,7 @@
 
 A stunning web-based audio visualizer that transforms your music into mesmerizing visual art. Experience sound in a whole new dimension with real-time audio visualization that dances to your rhythm.
 
-[![Try it out!](https://img.shields.io/badge/Try%20it%20out!-Live%20Demo-brightgreen)](https://soundvisualiser.windsurf.build/home) [![License: GPL-3.0](https://img.shields.io/badge/License-GPL--3.0-blue)](https://github.com/shirishpothi/soundvisualiser/blob/main/LICENSE) [![Security](https://github.com/shirishpothi/soundvisualiser/actions/workflows/security.yml/badge.svg)](https://github.com/shirishpothi/soundvisualiser/actions/workflows/security.yml) [![CI/CD](https://github.com/shirishpothi/soundvisualiser/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/shirishpothi/soundvisualiser/actions/workflows/ci-cd.yml)
+[![Try it out!](https://img.shields.io/badge/Try%20it%20out!-Live%20Demo-brightgreen)](https://soundvisualiser.windsurf.build/home) [![License: GPL-3.0](https://img.shields.io/badge/License-GPL--3.0-blue)](https://github.com/shirishpothi/soundvisualiser/blob/main/LICENSE) [![Security Scanning](https://img.shields.io/badge/Security%20Scanning-Passing-brightgreen)](https://github.com/shirishpothi/soundvisualiser/actions/workflows/security.yml) [![CI/CD Pipeline](https://img.shields.io/badge/CI%2FCD%20Pipeline-Passing-brightgreen)](https://github.com/shirishpothi/soundvisualiser/actions/workflows/ci-cd.yml)
 
 ## ✨ Features
 
