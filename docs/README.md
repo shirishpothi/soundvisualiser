@@ -2,7 +2,7 @@
 
 A stunning web-based audio visualizer that transforms your music into mesmerizing visual art. Experience sound in a whole new dimension with real-time audio visualization that dances to your rhythm.
 
-![SoundWave Demo](https://img.shields.io/badge/Demo-Live-brightgreen) ![License](https://img.shields.io/badge/License-CC%20BY--NC%204.0-blue) ![Browser Support](https://img.shields.io/badge/Browser-Modern%20Browsers-orange)
+[![Try it out!](https://img.shields.io/badge/Try%20it%20out!-Live%20Demo-brightgreen)](https://soundvisualiser.windsurf.build/home) ![License](https://img.shields.io/badge/License-GPL--3.0-blue) ![Safety Checks](https://img.shields.io/badge/Safety%20Checks-Passing-green) ![Build Status](https://img.shields.io/badge/Build-Passing-success)
 
 ## ✨ Features
 
@@ -130,6 +130,45 @@ npx serve .
 - **Smoothing Algorithms**: Temporal smoothing for stable visualizations
 - **Dynamic Range**: Automatic gain control and normalization
 - **Low Latency**: Optimized for real-time audio processing
+
+## 📁 Project Structure
+
+```
+/
+├── src/                    # Source code
+│   ├── styles/            # CSS files
+│   │   ├── main.css       # Main app styles (was styles-new.css)
+│   │   ├── home.css       # Landing page styles (was home-styles.css)
+│   │   └── legacy.css     # Legacy styles (was styles.css)
+│   ├── scripts/           # JavaScript files
+│   │   ├── main.js        # Main app logic (was script.js)
+│   │   ├── home.js        # Landing page logic (was home-script.js)
+│   │   └── utils/         # Utility modules (ready for future modularization)
+│   └── assets/            # Static assets (ready for future use)
+├── config/                # Configuration files
+│   ├── netlify.toml       # Netlify deployment config
+│   ├── lighthouserc.json  # Lighthouse CI config
+│   └── windsurf_deployment.yaml # Windsurf deployment config
+├── scripts/               # Build/deployment scripts
+│   └── install.sh         # Installation script
+├── docs/                  # Documentation
+│   └── README.md          # Detailed project documentation
+├── index.html             # Main visualizer app (updated paths)
+├── home.html              # Landing page (updated paths)
+├── package.json           # Dependencies and scripts
+├── package-lock.json      # Dependency lock file
+└── LICENSE                # License file
+```
+
+### Directory Overview
+
+- **`src/`**: Contains all source code organized by type
+  - **`styles/`**: CSS files with clear naming conventions
+  - **`scripts/`**: JavaScript files with modular structure
+  - **`assets/`**: Static assets like images, fonts, etc.
+- **`config/`**: Configuration files for deployment and CI/CD
+- **`scripts/`**: Build and deployment automation scripts
+- **`docs/`**: Project documentation and guides
 
 ## 🌐 Browser Support
 
