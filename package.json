@@ -42,7 +42,7 @@
   "devDependencies": {
     "eslint": "^8.57.0",
     "prettier": "^3.6.2",
-    "@lhci/cli": "^0.15.0",
+    "@lhci/cli": "^0.15.1",
     "html-validate": "^8.9.1"
   },
   "engines": {
