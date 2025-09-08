@@ -37,7 +37,7 @@
     "url": "https://github.com/shirishpothi/soundvisualiser/issues"
   },
   "dependencies": {
-    "serve": "^14.2.1"
+    "serve": "^14.2.5"
   },
   "devDependencies": {
     "eslint": "^8.57.0",
